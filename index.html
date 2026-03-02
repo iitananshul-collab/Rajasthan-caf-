@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Rajasthan Café</title>
+
+<style>
+/* ====== GENERAL ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff5e6;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: linear-gradient(45deg, #b34700, #ff9933);
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  background: #803300;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ====== MENU ====== */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.menu-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* ====== GALLERY ====== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ====== CONTACT ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #cc6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a64d00;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #803300;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ====== MOBILE ====== */
+@media (max-width:600px){
+  nav a {
+    display: block;
+    margin: 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Royal Rajasthan Café</h1>
+  <p>Authentic Taste of Rajasthan</p>
+</header>
+
+<nav>
+  <a href="#menu">Menu</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- MENU -->
+<section id="menu">
+<div class="container">
+<h2>Our Menu</h2>
+
+<div class="menu">
+  <div class="menu-item">Masala Chai – ₹25</div>
+  <div class="menu-item">Pyaaz Kachori – ₹40</div>
+  <div class="menu-item">Dal Baati – ₹150</div>
+  <div class="menu-item">Ghewar – ₹80</div>
+  <div class="menu-item">Rajasthani Thali – ₹250</div>
+  <div class="menu-item">Lassi – ₹60</div>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<div class="container">
+<h2>Gallery</h2>
+
+<div class="gallery">
+  <img src="https://source.unsplash.com/400x300/?rajasthan,food">
+  <img src="https://source.unsplash.com/400x300/?indian,thali">
+  <img src="https://source.unsplash.com/400x300/?kachori">
+  <img src="https://source.unsplash.com/400x300/?chai">
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+
+<p><strong>Address:</strong> MI Road, Jaipur, Rajasthan</p>
+<p><strong>Opening:</strong> 9:00 AM</p>
+<p><strong>Closing:</strong> 10:00 PM</p>
+
+<form onsubmit="showMessage(event)">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+  © 2026 Royal Rajasthan Café
+</footer>
+
+<script>
+function showMessage(event){
+  event.preventDefault();
+  alert("Thank you! Your message has been sent.");
+}
+</script>
+
+</body>
+  </html>
